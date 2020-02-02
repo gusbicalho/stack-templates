@@ -1,0 +1,25 @@
+#! /bin/bash
+
+
+
+function make_template() {
+  TEMPLATENAME="$1"
+  git clean -fxd "$TEMPLATENAME"
+  for file in $(find "$TEMPLATENAME" -type f); do
+    echo "{-# START_FILE $file #-}"
+    cat "$file"
+  done \
+  | sed 's/PROJECTNAME/{{name}}/g' \
+  | sed 's%GITHUB_USERNAME%{{github-username}}{{^github-username}}githubuser{{/github-username}}%g' \
+  | sed 's%AUTHOR_NAME%{{author-name}}{{^author-name}}Author name here{{/author-name}}%g' \
+  | sed 's%AUTHOR_EMAIL%{{author-email}}{{^author-email}}example@example.com{{/author-email}}%g' \
+  | sed 's%COPYRIGHT%{{copyright}}{{^copyright}}{{year}}{{^year}}2019{{/year}} {{author-name}}{{^author-name}}Author name here{{/author-name}}{{/copyright}}%g' \
+  > "$TEMPLATENAME.hsfiles"
+}
+
+
+for lockfile in ./**/*.lock; do
+  [ -e "$lockfile" ] && rm "$lockfile"
+done
+
+make_template "haskell-app-template"
