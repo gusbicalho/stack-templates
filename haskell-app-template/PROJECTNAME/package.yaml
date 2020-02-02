@@ -1,14 +1,11 @@
 name:                PROJECTNAME
 version:             0.1.0.0
-github:              "GITHUB_USERNAME/{{name}}"
+github:              "GITHUB_USERNAME/PROJECTNAME"
 author:              "AUTHOR_NAME"
 maintainer:          "AUTHOR_EMAIL"
 copyright:           "COPYRIGHT"
 
-extra-source-files:
-- README.md
-
-description:         Please see the README on GitHub at <https://github.com/GITHUB_USERNAME/{{name}}#readme>
+description:         Please see the README on GitHub at <https://github.com/GITHUB_USERNAME/PROJECTNAME#readme>
 
 ghc-options:
 - -Wall

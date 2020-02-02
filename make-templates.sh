@@ -5,9 +5,9 @@
 function make_template() {
   TEMPLATENAME="$1"
   git clean -fxd "$TEMPLATENAME"
-  for file in $(find "$TEMPLATENAME" -type f); do
+  for file in $(cd "$TEMPLATENAME"; find -type f | sed 's%^./%%'); do
     echo "{-# START_FILE $file #-}"
-    cat "$file"
+    cat "$TEMPLATENAME/$file"
   done \
   | sed 's/PROJECTNAME/{{name}}/g' \
   | sed 's%GITHUB_USERNAME%{{github-username}}{{^github-username}}githubuser{{/github-username}}%g' \
