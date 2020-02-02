@@ -22,4 +22,4 @@ for lockfile in ./**/*.lock; do
   [ -e "$lockfile" ] && rm "$lockfile"
 done
 
-make_template "haskell-app-template"
+make_template "multi-pkg-app"
