@@ -1,0 +1,4 @@
+#!/bin/sh
+
+./make-templates.sh
+git add *.hsfiles
