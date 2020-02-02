@@ -1,0 +1,75 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 1d2e17075bbf6466227189c41d275897f79c3558592849e20029079c05466091
+
+name:           PROJECTNAME
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/GITHUB_USERNAME/{{name}}#readme>
+homepage:       https://github.com/GITHUB_USERNAME/{{name}}#readme
+bug-reports:    https://github.com/GITHUB_USERNAME/{{name}}/issues
+author:         AUTHOR_NAME
+maintainer:     AUTHOR_EMAIL
+copyright:      COPYRIGHT
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/GITHUB_USERNAME/{{name}}
+
+library
+  exposed-modules:
+      PROJECTNAME
+  other-modules:
+      Paths_PROJECTNAME
+  hs-source-dirs:
+      src
+  default-extensions: ApplicativeDo BangPatterns ConstraintKinds DataKinds DefaultSignatures DeriveAnyClass DeriveFoldable DeriveFunctor DeriveGeneric DeriveLift DeriveTraversable DerivingStrategies EmptyCase ExistentialQuantification FlexibleContexts FlexibleInstances FunctionalDependencies GADTs GeneralizedNewtypeDeriving InstanceSigs KindSignatures LambdaCase MultiParamTypeClasses MultiWayIf NamedFieldPuns OverloadedLabels OverloadedStrings PatternSynonyms RankNTypes ScopedTypeVariables StandaloneDeriving TupleSections TypeApplications TypeFamilies TypeFamilyDependencies TypeOperators ViewPatterns
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -foptimal-applicative-do
+  build-depends:
+      base >=4.7 && <5
+    , fused-effects
+    , optparse-applicative
+    , text
+  default-language: Haskell2010
+
+executable PROJECTNAME-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_PROJECTNAME
+  hs-source-dirs:
+      app
+  default-extensions: ApplicativeDo BangPatterns ConstraintKinds DataKinds DefaultSignatures DeriveAnyClass DeriveFoldable DeriveFunctor DeriveGeneric DeriveLift DeriveTraversable DerivingStrategies EmptyCase ExistentialQuantification FlexibleContexts FlexibleInstances FunctionalDependencies GADTs GeneralizedNewtypeDeriving InstanceSigs KindSignatures LambdaCase MultiParamTypeClasses MultiWayIf NamedFieldPuns OverloadedLabels OverloadedStrings PatternSynonyms RankNTypes ScopedTypeVariables StandaloneDeriving TupleSections TypeApplications TypeFamilies TypeFamilyDependencies TypeOperators ViewPatterns
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -foptimal-applicative-do -O2 -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      PROJECTNAME
+    , base >=4.7 && <5
+    , fused-effects
+    , optparse-applicative
+    , text
+  default-language: Haskell2010
+
+test-suite PROJECTNAME-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      PROJECTNAMESpec
+      Paths_PROJECTNAME
+  hs-source-dirs:
+      test
+  default-extensions: ApplicativeDo BangPatterns ConstraintKinds DataKinds DefaultSignatures DeriveAnyClass DeriveFoldable DeriveFunctor DeriveGeneric DeriveLift DeriveTraversable DerivingStrategies EmptyCase ExistentialQuantification FlexibleContexts FlexibleInstances FunctionalDependencies GADTs GeneralizedNewtypeDeriving InstanceSigs KindSignatures LambdaCase MultiParamTypeClasses MultiWayIf NamedFieldPuns OverloadedLabels OverloadedStrings PatternSynonyms RankNTypes ScopedTypeVariables StandaloneDeriving TupleSections TypeApplications TypeFamilies TypeFamilyDependencies TypeOperators ViewPatterns
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -foptimal-applicative-do -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      PROJECTNAME
+    , QuickCheck
+    , base
+    , fused-effects
+    , hspec
+    , optparse-applicative
+    , text
+  default-language: Haskell2010
