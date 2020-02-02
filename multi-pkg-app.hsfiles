@@ -150,7 +150,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 1d2e17075bbf6466227189c41d275897f79c3558592849e20029079c05466091
+-- hash: 16a3ed52c86edc5866e5340309883de6b32f85aa1cf2898275dc743daffaa5e6
 
 name:           {{name}}
 version:        0.1.0.0
@@ -161,8 +161,6 @@ author:         {{author-name}}{{^author-name}}Author name here{{/author-name}}
 maintainer:     {{author-email}}{{^author-email}}example@example.com{{/author-email}}
 copyright:      {{copyright}}{{^copyright}}{{year}}{{^year}}2019{{/year}} {{author-name}}{{^author-name}}Author name here{{/author-name}}{{/copyright}}
 build-type:     Simple
-extra-source-files:
-    README.md
 
 source-repository head
   type: git

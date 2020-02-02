@@ -4,23 +4,21 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 1d2e17075bbf6466227189c41d275897f79c3558592849e20029079c05466091
+-- hash: 16a3ed52c86edc5866e5340309883de6b32f85aa1cf2898275dc743daffaa5e6
 
 name:           PROJECTNAME
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/GITHUB_USERNAME/{{name}}#readme>
-homepage:       https://github.com/GITHUB_USERNAME/{{name}}#readme
-bug-reports:    https://github.com/GITHUB_USERNAME/{{name}}/issues
+description:    Please see the README on GitHub at <https://github.com/GITHUB_USERNAME/PROJECTNAME#readme>
+homepage:       https://github.com/GITHUB_USERNAME/PROJECTNAME#readme
+bug-reports:    https://github.com/GITHUB_USERNAME/PROJECTNAME/issues
 author:         AUTHOR_NAME
 maintainer:     AUTHOR_EMAIL
 copyright:      COPYRIGHT
 build-type:     Simple
-extra-source-files:
-    README.md
 
 source-repository head
   type: git
-  location: https://github.com/GITHUB_USERNAME/{{name}}
+  location: https://github.com/GITHUB_USERNAME/PROJECTNAME
 
 library
   exposed-modules:
