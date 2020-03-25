@@ -5,10 +5,11 @@
 function make_template() {
   TEMPLATENAME="$1"
   git clean -fxd "$TEMPLATENAME"
-  for file in $(cd "$TEMPLATENAME"; find -type f | sed 's%^./%%'); do
+  for file in $(cd "$TEMPLATENAME"; find . -type f | sed 's%^./%%' | sort); do
     echo "{-# START_FILE $file #-}"
     cat "$TEMPLATENAME/$file"
   done \
+  | perl -p -e 's%(.+){-# START_FILE%\1\n{-# START_FILE%' \
   | sed 's/PROJECTNAME/{{name}}/g' \
   | sed 's%GITHUB_USERNAME%{{github-username}}{{^github-username}}githubuser{{/github-username}}%g' \
   | sed 's%AUTHOR_NAME%{{author-name}}{{^author-name}}Author name here{{/author-name}}%g' \
